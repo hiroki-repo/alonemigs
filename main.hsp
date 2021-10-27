@@ -6,7 +6,7 @@
 	return
 	#deffunc fprocutil int prm_0,int prm_1
 	if prm_1=""{prm_1str=""}else{dupptr prm_1str,prm_1,65536,2}
-	if prm_0=0{return _faddproc(prm_1str)}else{lpoke ptr4procptr,0,prm_0}
+	if prm_0=0{return _faddproc(prm_1str)}else{mref statpt,64:lpoke statpt,0,prm_1:lpoke ptr4procptr,0,prm_0}
 	goto ptr4procptr
 	return
 	dllname "migs.dll"
