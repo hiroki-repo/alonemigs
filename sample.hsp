@@ -1,0 +1,3 @@
+#include "amigs.as"
+ptr4prg=fprocutil(0,"hello.ax")
+mes fprocutil(ptr4prg,"")
