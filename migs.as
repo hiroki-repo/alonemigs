@@ -204,7 +204,7 @@ case 7
 lpoke labelinfofortranslated(code+labelingist),0,lpeek(ot,code*4)
 //labeliees=labeliees+1
         if labeliees<=code{labeliees=code}
-if (cold&31)=15 and codeold=4{ax2cnt=ax2cnt+4}else{ax2cnt=ax2cnt+18}
+if (cold&31)=15 and (codeold=4 or codeold=6){ax2cnt=ax2cnt+4}else{ax2cnt=ax2cnt+18}
 swbreak
 case 11
 type11checkec=1
@@ -318,7 +318,7 @@ funcnubgetstrxcab=0
         /*dupptr formadgelabeladdrdata,lpeek(formadgelabeladdr,0),256,2
         if wpeek(formadgelabeladdrdata,4) &0x8000{formadgelabeladdrptpt=lpeek(formadgelabeladdrdata,6)}else{formadgelabeladdrptpt=wpeek(formadgelabeladdrdata,6)}
         lpoke programy,ax2cnt,formadgelabeladdrptpt+code:ax2cnt=ax2cnt+4*/
-        if (cold&31)=15 and codeold=4{repeatlabelflbl(repeatlabelflblptpt)=labelinfofortranslated(code+labelingist):lpoke programy,ax2cnt,lblspsharedstrptptr+repeatlabelflblptpt:repeatlabelflblptpt+=1:ax2cnt=ax2cnt+4}else{wpoke programy,ax2cnt-2,(c &0x7000)or (0x8000 or 1):if wpeek(saladeuyunidataforfm,4) &0x8000{suyni=lpeek(saladeuyunidataforfm,6)}else{suyni=wpeek(saladeuyunidataforfm,6)}:lpoke programy, ax2cnt,suyni:ax2cnt=ax2cnt+4:lpoke programy, ax2cnt,0x00280000:ax2cnt=ax2cnt+4:wpoke programy, ax2cnt,0x8004:ax2cnt=ax2cnt+2:lpoke programy, ax2cnt,code+labelingist:ax2cnt=ax2cnt+4:lpoke programy, ax2cnt,0x00290000:ax2cnt=ax2cnt+4}
+        if (cold&31)=15 and (codeold=4 or codeold=6){repeatlabelflbl(repeatlabelflblptpt)=labelinfofortranslated(code+labelingist):lpoke programy,ax2cnt,lblspsharedstrptptr+repeatlabelflblptpt:repeatlabelflblptpt+=1:ax2cnt=ax2cnt+4}else{wpoke programy,ax2cnt-2,(c &0x7000)or (0x8000 or 1):if wpeek(saladeuyunidataforfm,4) &0x8000{suyni=lpeek(saladeuyunidataforfm,6)}else{suyni=wpeek(saladeuyunidataforfm,6)}:lpoke programy, ax2cnt,suyni:ax2cnt=ax2cnt+4:lpoke programy, ax2cnt,0x00280000:ax2cnt=ax2cnt+4:wpoke programy, ax2cnt,0x8004:ax2cnt=ax2cnt+2:lpoke programy, ax2cnt,code+labelingist:ax2cnt=ax2cnt+4:lpoke programy, ax2cnt,0x00290000:ax2cnt=ax2cnt+4}
         //dupptr labelliesdumped@,varptr(programy)+ax2cnt-20,256
         //dialog suyni
         //lpoke labelinfofortranslated(code+labelingist),0,code+varptr(programy)

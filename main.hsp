@@ -1,5 +1,6 @@
 	#include "hsp3ax2dll.as"
 	#packopt name "migs"
+	#packopt hide 1
 	#include "migs.as"
 	gsel 0,-1
 	ldim ptr4procptr,1
